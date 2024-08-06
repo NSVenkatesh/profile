@@ -55,7 +55,7 @@ function Navbar() {
         style={{ height: "100vh" }} // Full height for the navbar
       >
         <div className="mb-8 overflow-hidden text-center">
-          <NavLink to="/" onClick={handleLinkClick}>
+          <NavLink to="/profile" onClick={handleLinkClick}>
             <img
               src={image}
               alt="logo"
