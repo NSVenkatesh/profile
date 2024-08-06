@@ -17,7 +17,7 @@ function App() {
             {/* Main content area */}
             <main className="flex-1 ml-0 sm:ml-64 transition-all duration-300">
               <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/profile" element={<Home />} />
                 <Route path="/resume" element={<Resume />} />
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/contact" element={<Contact />} />

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import image from "../images/logo11.png";
 
 const navLinks = [
-  { to: "/", iconClass: "fas fa-home", label: "Home" },
+  { to: "/profile", iconClass: "fas fa-home", label: "Home" },
   { to: "/resume", iconClass: "fas fa-file-alt", label: "Resume" },
   { to: "/portfolio", iconClass: "fas fa-briefcase", label: "Portfolio" },
   { to: "/contact", iconClass: "fas fa-envelope", label: "Contact" },

@@ -20,9 +20,10 @@ function Home() {
           className="text-xl sm:text-2xl font-medium mb-6 text-gray-600"
           style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
         />
+        <br></br>
         <Link
           to="/portfolio"
-          className="inline-block px-5 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 transition duration-300"
+          className="mt-4 inline-block px-5 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 transition duration-300"
           style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
         >
           View My Works
