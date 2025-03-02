@@ -21,12 +21,12 @@ function App() {
           <div className="flex-1 flex flex-col sm:flex-row">
             <main className="flex-1 ml-0 sm:ml-64 transition-all duration-300">
               <Routes>
-                <Route path="/" element={<Navigate to="/profile" />} />
-                <Route path="/profile" element={<Home />} />
+                {/* <Route path="/" element={<Navigate to="/" />} /> */}
+                <Route path="/" element={<Home />} />
                 <Route path="/resume" element={<Resume />} />
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="*" element={<Navigate to="/profile" />} />
+                <Route path="*" element={<Navigate to="/" />} />
               </Routes>
             </main>
           </div>

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import image from "../images/logo11.png";
+import image from "../images/logo1.png";
 
 const navLinks = [
-  { to: "/profile", iconClass: "fas fa-home", label: "Home" },
+  { to: "/", iconClass: "fas fa-home", label: "Home" },
   { to: "/resume", iconClass: "fas fa-file-alt", label: "Resume" },
   { to: "/portfolio", iconClass: "fas fa-briefcase", label: "Portfolio" },
   { to: "/contact", iconClass: "fas fa-envelope", label: "Contact" },
@@ -52,14 +52,14 @@ function Navbar() {
         className={`fixed top-0 left-0 w-full sm:w-64 bg-gray-900 px-5 py-5 text-gray-300 z-40 transition-transform transform ${
           isNavbarVisible ? "translate-x-0" : "-translate-x-full"
         }`}
-        style={{ height: "100vh" }} // Full height for the navbar
+        style={{ height: "100vh" }}
       >
         <div className="mb-8 overflow-hidden text-center">
-          <NavLink to="/profile" onClick={handleLinkClick}>
+          <NavLink to="/" onClick={handleLinkClick}>
             <img
               src={image}
               alt="logo"
-              className="w-36 h-36 object-contain transform scale-110 rounded-full mx-auto"
+              className="w-36 h-36 bg-white  rounded-full mx-auto"
             />
           </NavLink>
           <p className="mt-6 text-white">Venkatesh N S</p>
@@ -73,7 +73,7 @@ function Navbar() {
                   className={({ isActive }) =>
                     `flex items-center p-2 rounded-lg ${
                       isActive
-                        ? "bg-gray-800 text-blue-400"
+                        ? "bg-gray-800 text-blue-400 font-semibold"
                         : "hover:bg-gray-800"
                     }`
                   }
