@@ -4,6 +4,7 @@ import g2048 from "../images/2048game.png";
 import currencyConvertor from "../images/currencyconvertor.png";
 import tenor from "../images/tenor.png";
 import tictactoe from "../images/tictactoe.png";
+import weather from "../images/weather.png";
 
 const data = [
   {
@@ -45,6 +46,14 @@ const data = [
     link: "https://nsvenkatesh.github.io/tic-tac-toe/",
     content:
       "Fast & fun Tic-Tac-Toe with React & Vite! Play solo vs AI or with a friend. Tracks turns, detects winners, and offers quick restarts. \nTechnologies used: React JS, Tailwind CSS",
+  },
+  {
+    img: weather,
+    name: "Weather App",
+    alt: "Weather",
+    link: "https://nsvenkatesh.github.io/weather-app/",
+    content:
+      "Real-time Weather App built with React & Vite! Instantly check temperature, humidity, and wind speed for any city.\n Technologies used: React JS, Tailwind CSS",
   },
 ];
 

@@ -10,24 +10,15 @@ const navLinks = [
 ];
 
 function Navbar() {
-  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(
+    window.innerWidth >= 650
+  );
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 650) {
-        setIsNavbarVisible(false);
-      } else {
-        setIsNavbarVisible(true);
-      }
-    };
+    const handleResize = () => setIsNavbarVisible(window.innerWidth >= 650);
 
     window.addEventListener("resize", handleResize);
-
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const handleLinkClick = () => {
@@ -42,12 +33,11 @@ function Navbar() {
         className="sm:hidden fixed top-4 right-4 bg-gray-800 text-white py-2 px-4 rounded z-50"
         onClick={() => setIsNavbarVisible(!isNavbarVisible)}
       >
-        {isNavbarVisible ? (
-          <i className="fa-solid fa-xmark"></i>
-        ) : (
-          <i className="fa-solid fa-bars"></i>
-        )}
+        <i
+          className={`fa-solid ${isNavbarVisible ? "fa-xmark" : "fa-bars"}`}
+        ></i>
       </button>
+
       <div
         className={`fixed top-0 left-0 w-full sm:w-64 bg-gray-900 px-5 py-5 text-gray-300 z-40 transition-transform transform ${
           isNavbarVisible ? "translate-x-0" : "-translate-x-full"
@@ -59,11 +49,12 @@ function Navbar() {
             <img
               src={image}
               alt="logo"
-              className="w-36 h-36 bg-white  rounded-full mx-auto"
+              className="w-36 h-36 bg-white rounded-full mx-auto"
             />
           </NavLink>
           <p className="mt-6 text-white">Venkatesh N S</p>
         </div>
+
         <nav className="nav-links">
           <ul className="space-y-3">
             {navLinks.map(({ to, iconClass, label }) => (
