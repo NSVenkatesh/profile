@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import image from "../images/logo1.png";
 
 const navLinks = [
   { to: "/", iconClass: "fas fa-home", label: "Home" },
@@ -11,18 +10,17 @@ const navLinks = [
 
 function Navbar() {
   const [isNavbarVisible, setIsNavbarVisible] = useState(
-    window.innerWidth >= 650
+    window.innerWidth >= 768
   );
 
   useEffect(() => {
-    const handleResize = () => setIsNavbarVisible(window.innerWidth >= 650);
-
+    const handleResize = () => setIsNavbarVisible(window.innerWidth >= 768);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const handleLinkClick = () => {
-    if (window.innerWidth < 650) {
+    if (window.innerWidth < 768) {
       setIsNavbarVisible(false);
     }
   };
@@ -30,63 +28,47 @@ function Navbar() {
   return (
     <>
       <button
-        className="sm:hidden fixed top-4 right-4 bg-gray-800 text-white py-2 px-4 rounded z-50"
+        className="sm:hidden fixed top-4 right-4 bg-gray-800 text-white p-3 rounded-full shadow-lg z-50"
         onClick={() => setIsNavbarVisible(!isNavbarVisible)}
       >
         <i
-          className={`fa-solid ${isNavbarVisible ? "fa-xmark" : "fa-bars"}`}
+          className={`fa-solid ${
+            isNavbarVisible ? "fa-xmark" : "fa-bars"
+          } text-lg`}
         ></i>
       </button>
 
       <div
-        className={`fixed top-0 left-0 w-full sm:w-64 bg-gray-900 px-5 py-5 text-gray-300 z-40 transition-transform transform ${
+        className={`fixed top-0 left-0 h-screen w-64 bg-gray-900 text-gray-300 shadow-lg z-40 transition-transform transform ${
           isNavbarVisible ? "translate-x-0" : "-translate-x-full"
-        }`}
-        style={{ height: "100vh" }}
+        } sm:translate-x-0 sm:flex sm:items-center sm:justify-center`}
       >
-        <div className="mb-8 overflow-hidden text-center">
-          <NavLink to="/" onClick={handleLinkClick}>
-            <img
-              src={image}
-              alt="logo"
-              className="w-36 h-36 bg-white rounded-full mx-auto"
-            />
-          </NavLink>
-          <p className="mt-6 text-white">Venkatesh N S</p>
-        </div>
+        <nav className="w-full flex flex-col items-center justify-center h-full">
+          <div className="w-12 h-1 bg-blue-500 rounded-full mb-6"></div>
 
-        <nav className="nav-links">
-          <ul className="space-y-3">
+          <ul className="space-y-6">
             {navLinks.map(({ to, iconClass, label }) => (
-              <li key={to}>
+              <li key={to} className="text-center">
                 <NavLink
                   to={to}
                   className={({ isActive }) =>
-                    `flex items-center p-2 rounded-lg ${
+                    `flex items-center gap-4 px-5 py-2.5 w-40 rounded-lg transition-all text-base font-medium 
+                    ${
                       isActive
-                        ? "bg-gray-800 text-blue-400 font-semibold"
-                        : "hover:bg-gray-800"
+                        ? "bg-blue-500 text-white shadow-md scale-105"
+                        : "hover:bg-gray-800 hover:text-blue-400"
                     }`
                   }
                   onClick={handleLinkClick}
                 >
-                  {({ isActive }) => (
-                    <>
-                      <i
-                        className={`${iconClass} mr-3`}
-                        style={{
-                          color: isActive
-                            ? "rgb(13, 110, 253)"
-                            : "rgb(156, 163, 175)",
-                        }}
-                      ></i>
-                      <p>{label}</p>
-                    </>
-                  )}
+                  <i className={`${iconClass} text-lg`}></i>
+                  <span>{label}</span>
                 </NavLink>
               </li>
             ))}
           </ul>
+
+          <div className="w-12 h-1 bg-blue-500 rounded-full mt-6"></div>
         </nav>
       </div>
     </>

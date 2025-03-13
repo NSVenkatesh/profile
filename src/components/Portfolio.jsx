@@ -13,7 +13,7 @@ const data = [
     alt: "Flipkart_mobile_listing",
     link: "https://nsvenkatesh.github.io/flipkart/Flipkart/",
     content:
-      "This prototype simulates the Flipkart mobile listing interface with functional search filters.  It mirrors key aspects of the Flipkart Web app.\nTechnologies used: HTML, CSS, jQuery.",
+      "This prototype simulates the Flipkart mobile listing interface with functional search filters. It mirrors key aspects of the Flipkart Web app.\nTechnologies used: HTML, CSS, jQuery.",
   },
   {
     img: g2048,
@@ -45,7 +45,7 @@ const data = [
     alt: "Tic Tac Toe",
     link: "https://nsvenkatesh.github.io/tic-tac-toe/",
     content:
-      "Fast & fun Tic-Tac-Toe with React & Vite! Play solo vs AI or with a friend. Tracks turns, detects winners, and offers quick restarts. \nTechnologies used: React JS, Tailwind CSS",
+      "Fast & fun Tic-Tac-Toe with React & Vite! Play solo vs AI or with a friend. Tracks turns, detects winners, and offers quick restarts.\nTechnologies used: React JS, Tailwind CSS",
   },
   {
     img: weather,
@@ -53,45 +53,45 @@ const data = [
     alt: "Weather",
     link: "https://nsvenkatesh.github.io/weather-app/",
     content:
-      "Real-time Weather App built with React & Vite! Instantly check temperature, humidity, and wind speed for any city.\n Technologies used: React JS, Tailwind CSS",
+      "Real-time Weather App built with React & Vite! Instantly check temperature, humidity, and wind speed for any city.\nTechnologies used: React JS, Tailwind CSS",
   },
 ];
 
 function Portfolio() {
-  const formatContent = (content) => {
-    return content.split("\n").map((item, index) => (
-      <React.Fragment key={index}>
-        {item}
-        <br />
-      </React.Fragment>
-    ));
-  };
-
   return (
     <div className="bg-gray-50 min-h-screen py-10">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center text-teal-700 mb-12">
+        <h1 className="text-3xl font-semibold text-teal-700 mb-8 border-b-2 border-teal-500 pb-2">
           My Projects
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {data.map(({ img, name, alt, link, content }) => (
             <div
               key={name}
-              className="bg-white flex flex-col rounded-lg shadow-lg overflow-hidden"
+              className="bg-white flex flex-col rounded-lg shadow-md border border-gray-200 overflow-hidden"
             >
-              <a href={link} target="_blank" rel="noopener noreferrer">
-                <img src={img} alt={alt} className="w-3/4 m-auto h-auto" />
+              <a
+                href={link}
+                target="_blank"
+                className="flex justify-center"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={img}
+                  alt={alt}
+                  className="w-4/5 h-32 sm:h-40 lg:h-48"
+                />
               </a>
-              <div className="p-6">
-                <h2 className="text-2xl font-semibold text-teal-600 mb-2">
-                  {name}
-                </h2>
-                <p className="text-gray-700 mb-4">{formatContent(content)}</p>
+              <div className="p-5">
+                <h2 className="text-lg font-semibold text-gray-800">{name}</h2>
+                <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+                  {content}
+                </p>
                 <a
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-teal-500 hover:underline"
+                  className="text-sm text-teal-600 font-medium inline-block mt-3 border border-teal-500 px-3 py-1 rounded-md hover:bg-teal-500 hover:text-white transition"
                 >
                   View Project
                 </a>
