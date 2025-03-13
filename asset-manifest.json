@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/profile/static/css/main.cb8a2da8.css",
-    "main.js": "/profile/static/js/main.5b51035d.js",
+    "main.css": "/profile/static/css/main.8b686c26.css",
+    "main.js": "/profile/static/js/main.e35c6556.js",
     "static/media/tenor.png": "/profile/static/media/tenor.06bfb96f002b3d49cf5f.png",
     "static/media/flipkart.png": "/profile/static/media/flipkart.bcec79996c555258cebe.png",
     "static/media/CssCertificate.jpg": "/profile/static/media/CssCertificate.c9062c0b50722ccd2482.jpg",
     "static/media/HtmlCertificate.jpg": "/profile/static/media/HtmlCertificate.682f7471ebf6752b698d.jpg",
+    "static/media/profile.webp": "/profile/static/media/profile.c148f9fb86a58202215e.webp",
     "static/media/currencyconvertor.png": "/profile/static/media/currencyconvertor.3d9788b34148673c481c.png",
     "static/media/2048game.png": "/profile/static/media/2048game.6f2e15cd8f115cec294b.png",
     "static/media/weather.png": "/profile/static/media/weather.df2e3d2d2e1f5a75f28e.png",
     "static/media/tictactoe.png": "/profile/static/media/tictactoe.082975b72ed8427cf818.png",
-    "static/media/logo1.png": "/profile/static/media/logo1.1626ac6cf05f50fab28a.png",
     "index.html": "/profile/index.html",
-    "main.cb8a2da8.css.map": "/profile/static/css/main.cb8a2da8.css.map",
-    "main.5b51035d.js.map": "/profile/static/js/main.5b51035d.js.map"
+    "main.8b686c26.css.map": "/profile/static/css/main.8b686c26.css.map",
+    "main.e35c6556.js.map": "/profile/static/js/main.e35c6556.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb8a2da8.css",
-    "static/js/main.5b51035d.js"
+    "static/css/main.8b686c26.css",
+    "static/js/main.e35c6556.js"
   ]
 }
