@@ -201,7 +201,7 @@ function Resume() {
               View Full Resume
             </h3>
             <a
-              href="https://drive.google.com/file/d/1r5QjDkfPLTHqATvNI003dI_1Cgiwip7u/view?usp=sharing"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-teal-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-teal-600 transition duration-300"
